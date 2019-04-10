@@ -33,7 +33,7 @@ function httpRequest(filePath){
 			getXML(this.responseText);
 		}
 	}
-	xhttp.open("GET", "/config/config.xml", true);
+	xhttp.open("GET", "/RoadTrip/config/config.xml", true);
 	xhttp.send();
 }
 
