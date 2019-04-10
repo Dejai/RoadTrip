@@ -1,3 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mfroadtrip>
-</mfroadtrip>
+<roadtrip>
+	<title>Motherfu**ing Road Trip!</title>
+	<subtitle>
+		<span style="margin-right:1%;">3 friends!</span>
+		<span style="margin-right:1%;">~</span>
+		<span style="margin-right:1%;">9 days!</span>
+		<span style="margin-right:1%;">~</span>
+		<span>6000+ miles!</span>
+	</subtitle>
+	<videos>
+		<preview>
+			<url>https://drive.google.com/file/d/1e-r5izU3NWqrOcy2NNNJEckjTR6qfswi/preview</url>
+			<width>640</width>
+			<height>480</height>
+			<editor>Pat</editor>
+		</preview>
+		<days>
+			<day>
+				<number>1</number>				
+				<url></url>
+				<editor></editor>
+			</day>
+			<day>
+				<number>2</number>
+				<url></url>
+				<editor></editor>
+			</day>
+			<day>
+				<number>3</number>
+				<url></url>
+				<editor></editor>
+			</day>
+			<day>
+				<number>4-6</number>
+				<url></url>
+				<editor></editor>
+			</day>
+			<day>
+				<number>7</number>
+				<url></url>
+				<editor></editor>
+			</day>
+			<day>
+				<number>8</number>
+				<url></url>
+				<editor></editor>
+			</day>
+			<day>
+				<number>9</number>
+				<url></url>
+				<editor></editor>
+			</day>
+		</days>
+	</videos>
+</roadtrip>

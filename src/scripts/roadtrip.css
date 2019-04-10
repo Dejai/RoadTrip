@@ -1,0 +1,15 @@
+
+/* Styles the elements in the header section */
+.header_section { text-align:center; }
+
+/* List the days in horizontal order */
+#days_menu_list { width:80%; display:block; margin:auto;}
+#days_menu_list li { display:inline-block; width:10%; margin:auto; }
+#days_menu_list li:hover { cursor:pointer; }
+
+/* Used to show a divider between the title and the video */
+.divider { border:none; height:1px; background-color: black;  }
+
+/* Controls the dimensions of the video frame */
+.video_display_container {text-align:center;}
+.video_display { margin:auto;}
