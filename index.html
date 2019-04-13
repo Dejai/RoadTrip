@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Motherfucking Road Trip</title>
+	<title>Motherfu**ing Road Trip</title>
 	<base href="/RoadTrip">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/RoadTrip/src/scripts/roadtrip.css">
 </head>
 <body>
 	<div class="header_section">
-		<h1 id="title"></h1>
-		<p id="subtitle"></p>
-		<!-- <ul id="days_menu_list" style="display:none;">
-			<li>Day 1</li>
-			<li>Day 2</li>
-			<li>Day 3</li>
-			<li>Day 4-6</li>
-			<li>Day 7</li>
-			<li>Day 8</li>
-			<li>Day 9</li>
-		</ul> -->
+		<h1 id="title" class="title"></h1>
+		<p id="subtitle" class="subtitle"></p>
+
+		<a id="navbar_open" class="glyphicon glyphicon-menu-hamburger nav_toggle" onclick="navbarToggle()"></a>
+	
+		<div id="navbar_responsive">
+			<a id="navbar_close" class="glyphicon glyphicon-remove nav_toggle" onclick="navbarToggle()"></a>
+			<h1 class='title navbar_responsive_header'></h1>
+			<p class='navbar_responsive_header' style="border-bottom:2px solid white;">Select a day:</p>
+			<ul id="days_menu_list">
+				<li>Preview</li>
+			</ul>
+		</div>
+
 	</div>
 	<hr class='divider'/>
 	<div class="video_display_container">
+		<h4 class="video_display_nav video_display_nav_left">Previous</h4>
+		<h4 class="video_display_nav video_display_nav_right">Next</h4>
+
 		<h2>Preview</h2>
 		<iframe id="video_frame" src="" class='video_display'></iframe>
 	</div>

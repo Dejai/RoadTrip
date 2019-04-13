@@ -2,14 +2,52 @@
 /* Styles the elements in the header section */
 .header_section { text-align:center; }
 
+/* Controls the navigation bar visibility for mobile devices */
+.navbar_responsive_header { font-size:300%; border-bottom:2px solid white; padding-bottom:5%; }
+p.navbar_responsive_header { border-bottom:2px solid white; padding-top:2%; padding-bottom:2%; }
+
+#navbar_responsive { display:none; position:fixed; top:0px; left:0px;height:100%; width:100%; opacity:1.0; z-index:100; 
+						background-color: black; color:white; }
+
+#navbar_close { color:red;}
+.nav_toggle { position:fixed; font-size:250%; top:20px; left:30px; }
+
 /* List the days in horizontal order */
 #days_menu_list { width:80%; display:block; margin:auto;}
-#days_menu_list li { display:inline-block; width:10%; margin:auto; }
-#days_menu_list li:hover { cursor:pointer; }
+#days_menu_list li { display:block; margin:auto; font-size:300%; margin-bottom:5%; margin-top:10%;}
+#days_menu_list li:hover { cursor:pointer; background-color:lightgray; }
+
 
 /* Used to show a divider between the title and the video */
 .divider { border:none; height:1px; background-color: black;  }
+.divider_white { border:none; height:1px; background-color: black;  }
 
 /* Controls the dimensions of the video frame */
-.video_display_container {text-align:center;}
-.video_display { margin:auto;}
+.video_display_container {text-align:center; width:100%; height:500px; position:relative;}
+.video_display_nav { position:absolute; }
+.video_display_nav:hover { cursor:pointer; }
+.video_display_nav_left { left:5%; }
+.video_display_nav_right { right:5%; }
+.video_display { margin:auto; width:100%; height:100%;}
+
+
+/*Medium devices (tablets, 768px and up)*/
+/*@media screen and (min-width:768px;) and (min-height:1024px){}*/
+
+/*iPads (mini, Air, and small pro) */
+/*@media screen and (min-width:768px) and (min-height:500px){}*/
+
+@media screen and (min-width:1024px){
+	.nav_toggle { display:none; }
+
+	.navbar_responsive_header { display:none; }
+	#days_menu_list li { display:inline-block; font-size:120%; margin:auto; }
+
+	#navbar_responsive { display:block; position:static; width:100%; padding:0%; padding-top:2%; opacity:inherit; background-color: initial; color:black; }
+	#days_menu_list li { display:inline-block; width:10%; margin:auto; }
+
+	.video_display_container {margin:auto; text-align:center; width:55%; height:550px;}
+
+
+}
+

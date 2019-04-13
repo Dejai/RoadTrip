@@ -2,11 +2,11 @@
 <roadtrip>
 	<title>Motherfu**ing Road Trip!</title>
 	<subtitle>
-		<span style="margin-right:1%;">3 friends!</span>
+		<span style="margin-right:1%;color:blue;">3 friends!</span>
 		<span style="margin-right:1%;">~</span>
-		<span style="margin-right:1%;">9 days!</span>
+		<span style="margin-right:1%;color:red;">9 days!</span>
 		<span style="margin-right:1%;">~</span>
-		<span>6000+ miles!</span>
+		<span style="color:green;">6000+ miles!</span>
 	</subtitle>
 	<videos>
 		<preview>
@@ -17,37 +17,37 @@
 		</preview>
 		<days>
 			<day>
-				<number>1</number>				
+				<number>Day 1</number>				
 				<url></url>
 				<editor></editor>
 			</day>
 			<day>
-				<number>2</number>
+				<number>Day 2</number>
 				<url></url>
 				<editor></editor>
 			</day>
 			<day>
-				<number>3</number>
+				<number>Day 3</number>
 				<url></url>
 				<editor></editor>
 			</day>
 			<day>
-				<number>4-6</number>
+				<number>Days 4-6</number>
 				<url></url>
 				<editor></editor>
 			</day>
 			<day>
-				<number>7</number>
+				<number>Day 7</number>
 				<url></url>
 				<editor></editor>
 			</day>
 			<day>
-				<number>8</number>
+				<number>Day 8</number>
 				<url></url>
 				<editor></editor>
 			</day>
 			<day>
-				<number>9</number>
+				<number>Day 9</number>
 				<url></url>
 				<editor></editor>
 			</day>
