@@ -24,6 +24,8 @@ function navbarToggle(){
 
 function setByClassName(className, value){
 	let elements = document.getElementsByClassName(className);
+	console.log("Class = " + className);
+	console.log(elements);
 	for (var x = 0; x < elements.length; x++){
 		elements[x].innerHTML = value;
 	}
