@@ -16,14 +16,28 @@ function navbarToggle(){
 	}
 }
 
-function selectMenuItem(dayName){
-	var day_name = dayName.toLowerCase().replace(" ", "_");
-	var menu_item = document.getElementById(day_name);
+function toggleBackstory(){
+	let back = document.getElementById("backstory");
+	let video = document.getElementById("video_display_container");
+	let disp = back.style.display;
 
+	let showBack = (disp == "none" || disp == "") ? "block" : "none";
+	let showVideo = (showBack == "none") ? "block" : "none";
+
+	back.style.display = showBack;
+	video.style.display = showVideo;
+
+}
+function clearSelected(){
 	var selected = document.getElementsByClassName("selected_day");
 	for (var x = 0; x < selected.length; x++){
 		selected[x].classList.remove("selected_day");
 	}
+}
+function selectMenuItem(dayName){
+	var day_name = dayName.toLowerCase().replace(" ", "_");
+	var menu_item = document.getElementById(day_name);
+	clearSelected();
 	menu_item.classList.add("selected_day");
 }
 
@@ -31,6 +45,9 @@ function clickedDay(event){
 
 	if (roadTripVideos.is_menu_open){
 		document.getElementById("navbar_close").click();
+	}
+	if (document.getElementById("backstory").style.display="block"){
+		toggleBackstory();
 	}
 	
 	let id = event.target.id;
@@ -125,6 +142,10 @@ function setPageValues(xmlDoc){
 	roadTripVideos["order"].unshift("preview");
 	clickedDay({"target":{"id":"preview", "innerHTML":"Preview"}});
 	console.log(roadTripVideos);
+
+	let backstory = xmldoc.querySelectorAll("backstory")[0];
+	document.getElementById("backstory_details").innerHTML = backstory.innerHTML;
+
 
 	/* Set video navigation listeners */
 	let navs = document.getElementsByClassName("video_nav");

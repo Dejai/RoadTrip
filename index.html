@@ -8,8 +8,9 @@
 </head>
 <body>
 	<div class="header_section">
-		<h1 id="title" class="title header"></h1>
+		<h1 id="title" class="title header h1"></h1>
 		<p id="subtitle" class="subtitle subheader"></p>
+		<p id="more_details" onclick="toggleBackstory()" class="subheader">click here for the details...</p>
 
 		<a id="navbar_open" class="glyphicon glyphicon-menu-hamburger nav_toggle header" onclick="navbarToggle()"></a>
 	
@@ -24,12 +25,17 @@
 
 	</div>
 	<hr class='divider'/>
-	<div class="video_display_container">
+	<div id="video_display_container" class="container">
 		<h4 class="video_nav video_nav_left subheader">Previous</h4>
 		<h4 class="video_nav video_nav_right subheader">Next</h4>
 
-		<h2 id="current_video_title" class="header"></h2>
+		<h2 id="current_video_title" class="header h2"></h2>
 		<iframe id="video_frame" src="" class='video_display'></iframe>
+	</div>
+	<div id="backstory" class="container">
+		<div id="backstory_details"></div>
+		<h3><button onclick="toggleBackstory()">Back to the videos</button></h3>
+		
 	</div>
 </body>
 
