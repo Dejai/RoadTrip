@@ -1,12 +1,5 @@
 
-var roadTripObj = {
-	"videos" : {
-		"preview" : ""
-	},
-	"current_video": "preview",
-	"previous_video": "Day 9",
-	"previous_video": "Day 1"
-};
+var roadTripVideos = { "order": [], "is_menu_open":false};
 
 function navbarToggle(){
 	let navbar = document.getElementById("navbar_responsive");
@@ -16,27 +9,93 @@ function navbarToggle(){
 
 	if (is_visible){
 		navbar.style.display = "none";
+		roadTripVideos.is_menu_open = false;
 	} else {
 		navbar.style.display = "block";
+		roadTripVideos.is_menu_open = true;
 	}
+}
 
+function selectMenuItem(dayName){
+	var day_name = dayName.toLowerCase().replace(" ", "_");
+	var menu_item = document.getElementById(day_name);
+
+	var selected = document.getElementsByClassName("selected_day");
+	for (var x = 0; x < selected.length; x++){
+		selected[x].classList.remove("selected_day");
+	}
+	menu_item.classList.add("selected_day");
+}
+
+function clickedDay(event){
+
+	if (roadTripVideos.is_menu_open){
+		document.getElementById("navbar_close").click();
+	}
+	
+	let id = event.target.id;
+	let name = event.target.innerHTML;
+	selectDay(id);
+	setTitle(name);
+
+}
+
+function clickedVideoNav(event){
+	let action = event.target.innerHTML;
+	let current_vid = document.getElementsByClassName("selected_day")[0].id;
+	var indx = roadTripVideos.order.indexOf(current_vid);
+	var len = roadTripVideos.order.length;
+
+	let next_vid = "preview"; //sets a default next value to just show the preview
+
+	if (action == "Previous"){
+		let prv = (indx == 0) ? len-1 : indx-1;
+		next_vid = roadTripVideos.order[prv];
+	} else {
+		let nxt = (indx == (len-1)) ? 0 : indx+1;
+		next_vid = roadTripVideos.order[nxt];
+	}
+	document.getElementById(next_vid).click();
+}
+
+function setTitle(value){
+	let videoTitle = document.getElementById("current_video_title");
+	videoTitle.innerHTML = value;
+}
+
+function selectDay(dayName){
+	var video_frame = document.getElementById("video_frame");
+	video_frame.src = roadTripVideos[dayName].url;
+	selectMenuItem(dayName);
 }
 
 function setByClassName(className, value){
 	let elements = document.getElementsByClassName(className);
-	console.log("Class = " + className);
-	console.log(elements);
 	for (var x = 0; x < elements.length; x++){
 		elements[x].innerHTML = value;
 	}
 }
 
-function createListOfElements(tagName, list, destinationElement){
+function createListOfElements(tagName, xmlElements, destinationElement){
 	let destElement = document.getElementById("days_menu_list");
-	for (var x = 0; x < list.length; x++){
+
+	for (var x = 0; x < xmlElements.length; x++){
+
+		let xmlEle = xmlElements[x];
 		let ele = document.createElement(tagName);
-		ele.innerHTML = list[x].innerHTML;
+		let day_val = xmlEle.innerHTML;
+		let day_id = day_val.toLowerCase().replace(" ", "_");
+		ele.innerHTML = day_val;
+		ele.id = day_id;
+		ele.addEventListener("click", clickedDay, true);
 		destElement.appendChild(ele);
+
+		/* Add the details to the roadTripVideos object */
+		roadTripVideos["order"].push(day_id);
+		let parent = xmlEle.parentNode;
+		let url = parent.querySelectorAll("url")[0].innerHTML;
+		let editor = parent.querySelectorAll("editor")[0].innerHTML;
+		roadTripVideos[day_id] = {"url":url, "editor":editor};
 	}
 }
 
@@ -61,9 +120,17 @@ function setPageValues(xmlDoc){
 	// console.log(document.getElementById("video_frame").width)
 
 	let previewURL = xmldoc.querySelectorAll("preview url")[0].innerHTML;
-	document.getElementById("video_frame").src = previewURL;
+	let previewEditor = xmldoc.querySelectorAll("preview editor")[0].innerHTML;
+	roadTripVideos["preview"] = {"url": previewURL, "editor": previewEditor};
+	roadTripVideos["order"].unshift("preview");
+	clickedDay({"target":{"id":"preview", "innerHTML":"Preview"}});
+	console.log(roadTripVideos);
 
-	console.log(roadTripObj);
+	/* Set video navigation listeners */
+	let navs = document.getElementsByClassName("video_nav");
+	for(var i=0; i < navs.length; i++){
+		navs[i].addEventListener("click", clickedVideoNav, true);
+	}
 }
 
 function getXML(responseText){
@@ -85,4 +152,5 @@ function httpRequest(filePath){
 
 document.addEventListener("DOMContentLoaded", function(){
 	httpRequest();
+
 });

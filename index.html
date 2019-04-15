@@ -18,17 +18,17 @@
 			<h1 class='title menu_header header'></h1>
 			<p class='menu_header header' style="border-bottom:2px solid white;">Select a day:</p>
 			<ul id="days_menu_list">
-				<li>Preview</li>
+				<li id="preview" onclick="clickedDay(event)">Preview</li>
 			</ul>
 		</div>
 
 	</div>
 	<hr class='divider'/>
 	<div class="video_display_container">
-		<h4 class="video_display_nav video_display_nav_left subheader disabled">Previous</h4>
-		<h4 class="video_display_nav video_display_nav_right subheader disabled">Next</h4>
+		<h4 class="video_nav video_nav_left subheader">Previous</h4>
+		<h4 class="video_nav video_nav_right subheader">Next</h4>
 
-		<h2 id="current_video_day_label" class="header">Preview</h2>
+		<h2 id="current_video_title" class="header"></h2>
 		<iframe id="video_frame" src="" class='video_display'></iframe>
 	</div>
 </body>

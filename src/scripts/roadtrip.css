@@ -1,4 +1,4 @@
-/* Styles the elements in the header sections */
+/* Styles the elements in the header sections - including the titles/subtitles */
 .header_section { text-align:center; }
 .header { font-size:300%; }
 .subheader { font-size:200%; }
@@ -17,6 +17,7 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 #days_menu_list { width:80%; display:block; margin:auto;}
 #days_menu_list li { display:block; margin:auto; font-size:300%; margin-bottom:5%; margin-top:10%;}
 #days_menu_list li:hover { cursor:pointer; background-color:lightgray; }
+.selected_day { background-color:white; color:black; }
 
 
 /* Used to show a divider between the title and the video */
@@ -25,10 +26,10 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 
 /* Controls the dimensions of the video frame */
 .video_display_container {text-align:center; width:100%; height:500px; position:relative;}
-.video_display_nav { position:absolute; }
-.video_display_nav:hover { cursor:pointer; }
-.video_display_nav_left { left:5%; }
-.video_display_nav_right { right:5%; }
+.video_nav { position:absolute; }
+.video_nav:hover { cursor:pointer; }
+.video_nav_left { left:5%; }
+.video_nav_right { right:5%; }
 .video_display { margin:auto; width:100%; height:100%;}
 
 .disabled { color:lightgray; cursor:disabled; }
@@ -48,10 +49,10 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 	.nav_toggle { display:none; }
 	.menu_header { display:none; }
 
-	#days_menu_list li { display:inline-block; font-size:100%; margin:auto; }
-
 	#navbar_responsive { display:block; position:static; width:100%; padding:0%; padding-top:2%; opacity:inherit; background-color: initial; color:black; }
-	#days_menu_list li { display:inline-block; width:10%; margin:auto; }
+	#days_menu_list li { display:inline-block; width:10%; font-size:100%; margin:auto; }
+	.selected_day { background-color:lightgray; color:black; }
+
 
 	.video_display_container {margin:auto; text-align:center; width:55%; height:550px;}
 
