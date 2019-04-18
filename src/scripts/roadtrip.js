@@ -142,13 +142,6 @@ function setPageValues(xmlDoc){
 	let days = xmldoc.querySelectorAll("day number");
 	createListOfElements("li", days, "days_menu_list");
 
-	// let previewURLWidth = xmldoc.querySelectorAll("preview width")[0].innerHTML;
-	// let previewURLHeight = xmldoc.querySelectorAll("preview height")[0].innerHTML;
-	// console.log(previewURLWidth);
-	// document.getElementById("video_frame").width = previewURLWidth;
-	// document.getElementById("video_frame").height = previewURLHeight;
-	// console.log(document.getElementById("video_frame").width)
-
 	let previewURL = xmldoc.querySelectorAll("preview url")[0].innerHTML;
 	let previewEditor = xmldoc.querySelectorAll("preview editor")[0].innerHTML;
 	let previewTime = xmldoc.querySelectorAll("preview time")[0].innerHTML;
@@ -160,7 +153,6 @@ function setPageValues(xmlDoc){
 
 	let backstory = xmldoc.querySelectorAll("backstory")[0];
 	document.getElementById("backstory_details").innerHTML = backstory.innerHTML;
-
 
 	/* Set video navigation listeners */
 	let navs = document.getElementsByClassName("video_nav");

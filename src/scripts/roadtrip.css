@@ -53,9 +53,6 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 	.container {margin:auto; width:75%; height:550px;}
 }
 
-/*iPads (mini, Air, and small pro) */
-/*@media screen and (min-width:768px) and (min-height:500px){}*/
-
 @media screen and (min-width:1024px){
 
 	/*.header { font-size:36px; }*/
