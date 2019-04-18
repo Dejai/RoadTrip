@@ -1,8 +1,10 @@
 /* Styles the elements in the header sections - including the titles/subtitles */
 .header_section { text-align:center; }
 .header { font-size:400%; }
-.subheader { font-size:210%; }
-.inline_header { display:inline-block; margin-right:2%; font-size:300%; }
+.subheader { font-size:220%; }
+.inline_header { display:inline-block; }
+
+.readable { font-size:300%; }
 
 /* Controls the navigation bar visibility for mobile devices */
 p.menu_header { border-bottom:2px solid white; border-top:2px solid white; padding-top:2%; padding-bottom:2%;
@@ -26,8 +28,10 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 .divider_white { border:none; height:1px; background-color: black;  }
 
 /* Controls the dimensions of the video frame */
+#video_details_table { width:100%; text-align:left; }
+
 #video_display_container {text-align:center;}
-.video_nav { position:absolute; }
+.video_nav { position:absolute; color:blue; }
 .video_nav:hover { cursor:pointer; }
 .video_nav_left { left:5%; }
 .video_nav_right { right:5%; }
@@ -39,9 +43,9 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 /* Styling for the desriptive section (i.e. the backstory) */
 #more_details { cursor:pointer; font-style:italic; }
 #backstory { display:none; margin:auto; width:90%;}
-#backstory_details { font-size:200%; }
+#backstory_details { font-size:250%; }
 
-#back_to_videos { font-size:200px; }
+#back_to_videos { font-size:250%; }
 
 
 /*Medium devices (tablets, 768px and up)*/
@@ -60,6 +64,8 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 	.subheader { font-size:initial; }
 	.inline_header { font-size:18px; }
 
+	.readable { font-size:initial; }
+
 
 	.nav_toggle { display:none; }
 	.menu_header { display:none; }
@@ -69,11 +75,13 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 	.selected_day { background-color:lightgray; color:black; }
 
 	/*#video_display_container {margin:auto; text-align:center; width:55%; height:550px;}*/
+	#video_details_table { width:50%; margin:auto; text-align:left; }
+
 	.container {margin:auto; width:75%; height:550px;}
 	#backstory { width:55%;}
 	#backstory_details { font-size:110%; }
 
-	#back_to_videos { font-size:initial; }
+	#back_to_videos {font-size:initial; }
 
 
 

@@ -30,20 +30,21 @@
 		<h4 class="video_nav video_nav_right subheader">Next</h4>
 
 		<h2 id="current_video_title" class="header h2"></h2>
-		<table style="width:50%; margin:auto; text-align:left;">
+		<table id="video_details_table" >
 			<tr>
-				<td style="text-align:left;"><h4 class="inline_header">Video Time: <span id="video_time"></span></h4> </td>
-				<td style="text-align:right;"><h4 class="inline_header">Editor: <span id="editor_name"></span></h4> </td>
+				<td style="text-align:left;"><h4 class="inline_header subheader">Video Time: <span id="video_time"></span></h4> </td>
+				<td style="text-align:right;"><h4 class="inline_header subheader">Editor: <span id="editor_name"></span></h4> </td>
 			</tr>
 		</table>
 		<iframe id="video_frame" src="" class='video_display'></iframe>
-		<p><h4 class="inline_header">Description: <span id="video_description"></span></h4></p>
+		<p><h4 class="inline_header readable">Description: <span id="video_description"></span></h4></p>
 		
 	</div>
 	<div id="backstory" class="container">
 		<div id="backstory_details"></div>
 		<br/>
 		<button id="back_to_videos" onclick="toggleBackstory()">Back to the videos</button>
+		<br/><br/>
 	</div>
 </body>
 
