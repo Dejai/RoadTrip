@@ -4,7 +4,7 @@
 .subheader { font-size:220%; }
 .inline_header { display:inline-block; }
 
-.readable { font-size:300%; }
+.readable { font-size:280%; }
 
 /* Controls the navigation bar visibility for mobile devices */
 p.menu_header { border-bottom:2px solid white; border-top:2px solid white; padding-top:2%; padding-bottom:2%;
