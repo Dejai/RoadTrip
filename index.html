@@ -9,7 +9,7 @@
 <body>
 	<div class="header_section">
 		<h1 id="title" class="title header h1"></h1>
-		<p id="subtitle" class="subtitle subheader"></p>
+		<p id="subtitle" class="subtitle subheader" onclick="toggleBackstory()"></p>
 		<p id="more_details" onclick="toggleBackstory()" class="subheader">click here for the details...</p>
 
 		<a id="navbar_open" class="glyphicon glyphicon-menu-hamburger nav_toggle header" onclick="navbarToggle()"></a>
@@ -42,7 +42,8 @@
 	</div>
 	<div id="backstory" class="container">
 		<div id="backstory_details"></div>
-		<h3><button onclick="toggleBackstory()">Back to the videos</button></h3>
+		<br/>
+		<button id="back_to_videos" onclick="toggleBackstory()">Back to the videos</button>
 	</div>
 </body>
 

@@ -2,7 +2,7 @@
 .header_section { text-align:center; }
 .header { font-size:400%; }
 .subheader { font-size:210%; }
-.inline_header { display:inline-block; margin-right:2%; }
+.inline_header { display:inline-block; margin-right:2%; font-size:300%; }
 
 /* Controls the navigation bar visibility for mobile devices */
 p.menu_header { border-bottom:2px solid white; border-top:2px solid white; padding-top:2%; padding-bottom:2%;
@@ -41,6 +41,8 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 #backstory { display:none; margin:auto; width:90%;}
 #backstory_details { font-size:200%; }
 
+#back_to_videos { font-size:300%; }
+
 
 /*Medium devices (tablets, 768px and up)*/
 @media screen and (min-width:768px;){
@@ -56,6 +58,8 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 	.h1 { font-size:36px; }
 	.h2 { font-size:30px; }
 	.subheader { font-size:initial; }
+	.inline_header { font-size:18px; }
+
 
 	.nav_toggle { display:none; }
 	.menu_header { display:none; }
@@ -68,6 +72,9 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 	.container {margin:auto; width:75%; height:550px;}
 	#backstory { width:55%;}
 	#backstory_details { font-size:110%; }
+
+	#back_to_videos { font-size:initial; }
+
 
 
 }
