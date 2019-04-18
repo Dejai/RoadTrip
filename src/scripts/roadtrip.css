@@ -41,7 +41,7 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 #backstory { display:none; margin:auto; width:90%;}
 #backstory_details { font-size:200%; }
 
-#back_to_videos { font-size:300%; }
+#back_to_videos { font-size:200px; }
 
 
 /*Medium devices (tablets, 768px and up)*/
