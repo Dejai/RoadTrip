@@ -39,11 +39,25 @@
 				<description>Yellowstone National Park! This place is so majestic!!</description>
 			</day>
 			<day>
-				<number>Days 4-6</number>
-				<url>https://drive.google.com/file/d/1QXYPh2cy-y9gA7U7EzDQfyYNy6O8eFaR/preview</url>
+				<number>Day 4</number>
+				<url>https://drive.google.com/file/d/1ghY_poo00oGarBZtjZNf2l7xmaINVvnh/preview</url>
 				<editor>Derrick Fyfield</editor>
-				<time>16:44</time>
-				<description>San Francisco Adventures! Featuring Emily!</description>
+				<time>1:27</time>
+				<description>Making our way to San Francisco!</description>
+			</day>
+			<day>
+				<number>Day 5</number>
+				<url>https://drive.google.com/file/d/1_9SVAd9qrCQGxBkSrMqNG2MPsyUVrW37/preview</url>
+				<editor>Derrick Fyfield</editor>
+				<time>09:52</time>
+				<description>A full day of San Francisco Adventures! Featuring Emily!</description>
+			</day>
+			<day>
+				<number>Day 6</number>
+				<url>https://drive.google.com/file/d/1oJZR2saLFlBO2RvQbvBEJKqmLSfmjaz9/preview</url>
+				<editor>Derrick Fyfield</editor>
+				<time>05:27</time>
+				<description>The Golden Gate Bridge plus a hike in Muir Woods, then heading out of San Francisco.</description>
 			</day>
 			<day>
 				<number>Day 7</number>

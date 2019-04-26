@@ -17,8 +17,8 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 #navbar_close { color:red;}
 
 /* List the days in horizontal order */
-#days_menu_list { width:80%; display:block; margin:auto;}
-#days_menu_list li { display:block; margin:auto; font-size:300%; margin-bottom:5%; margin-top:10%;}
+#days_menu_list { width:90%; display:block; margin:auto;}
+#days_menu_list li { display:block; margin:auto; font-size:300%; margin-bottom:5%; margin-top:7%;}
 #days_menu_list li:hover { cursor:pointer; background-color:lightgray; }
 .selected_day { background-color:white; color:black; }
 
@@ -68,7 +68,7 @@ p.menu_header { border-bottom:2px solid white; border-top:2px solid white; paddi
 	.menu_header { display:none; }
 
 	#navbar_responsive { display:block; position:static; width:100%; padding:0%; padding-top:1%; opacity:inherit; background-color: initial; color:black; }
-	#days_menu_list li { display:inline-block; width:10%; font-size:100%; margin:auto; }
+	#days_menu_list li { display:inline-block; width:8%; font-size:100%; margin:auto; }
 	.selected_day { background-color:lightgray; color:black; }
 
 	/*#video_display_container {margin:auto; text-align:center; width:55%; height:550px;}*/
